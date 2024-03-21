@@ -1,12 +1,54 @@
 {
-  "authorizationURL": "https://example.com/oauth/authorize",
-  "tokenURL": "https://example.com/oauth/token",
+  "authorizationURL": "https://huggingface.co/oauth/authorize",
+  "tokenURL": "https://huggingface.co/oauth/token",
   "permissions": [
     {
-      "scope": "example",
-      "label": "Example Permission",
+      "scope": "openid",
+      "label": "Basic user information",
+      "required": true,
+      "default": true
+    },
+    {
+      "scope": "profile",
+      "label": "User profile information",
       "required": false,
       "default": true
+    },
+    {
+      "scope": "email",
+      "label": "User email",
+      "required": false,
+      "default": false
+    },
+    {
+      "scope": "read-repos",
+      "label": "Read access to user's models, datasets, and Spaces",
+      "required": false,
+      "default": false
+    },
+    {
+      "scope": "write-repos",
+      "label": "Write access to code of user's models, datasets, and Spaces",
+      "required": false,
+      "default": false
+    },
+    {
+      "scope": "manage-repos",
+      "label": "Complete control of user's models, datasets, and Spaces",
+      "required": false,
+      "default": false
+    },
+    {
+      "scope": "inference-api",
+      "label": "Access to the serverless inference API on behalf of the user",
+      "required": false,
+      "default": false
+    },
+    {
+      "scope": "read-billing",
+      "label": "Know if the user has a paid plan",
+      "required": false,
+      "default": false
     }
   ],
   "configuration": [

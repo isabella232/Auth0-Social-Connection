@@ -1,13 +1,18 @@
-[[TODO: Summary text that does not duplicate the listing content]]
+The Hugging Face social connection allows users to log in to your application using their Hugging Face profile.
+
+It's also possible to interact with the Hugging Face API using the access token provided by the connection. This allows you to read and write data to the user's Hugging Face account, including their models, datasets, and Spaces.
 
 ## Prerequisites
 
 1. An Auth0 account and tenant. [Sign up for free](https://auth0.com/signup).
-2. [[TODO: Instructions for creating an account with your service]]
+1. Create a Hugging Face account. [Sign up for free](https://huggingface.co/join).
 
 ## Set up [[TODO: Your service name]]
 
-[[TODO: Add steps as an ordered list for configuring your service]]
+1. Create an application at https://huggingface.co/settings/applications/new
+1. Make sure to tick the scopes you need, for example `profile` and `email`.
+1. Set the redirect URL to `https://YOUR_DOMAIN/login/callback`
+1. Make a note of the `Client ID` and `Client Secret`.
 
 ## Add the Connection
 
@@ -26,4 +31,4 @@ You're ready to [test this Connection](https://auth0.com/docs/authenticate/ident
 
 ## Troubleshooting
 
-[[TODO: Common issues or links to troubleshooting resources]]
+Send an email to website@huggingface.co if you encounter issues.

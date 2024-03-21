@@ -1,8 +1,8 @@
 {
   "options": {
-    "icon_url": "https://identicons.dev/static/icons/mono/png/icon-integrations-marketplace.png"
+    "icon_url": "https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png"
   },
   "strategy": "oauth2",
-  "name": "social-connection-integration-test",
-  "display_name": "Integration Test"
+  "name": "huggingface",
+  "display_name": "Hugging Face"
 }

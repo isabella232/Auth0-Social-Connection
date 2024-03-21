@@ -25,6 +25,22 @@ module.exports = function fetchUserProfile(accessToken, context, callback) {
 
       const profile = {
         user_id: bodyParsed.sub,
+        email: bodyParsed.email,
+        email_verified: bodyParsed.email_verified,
+        fullname: bodyParsed.name,
+        username: bodyParsed.preferred_username,
+				profile: bodyParsed.profile,
+				picture: bodyParsed.picture,
+				website: bodyParsed.website,
+
+        is_pro: bodyParsed.isPro,
+        can_pay: bodyParsed.canPay,
+        organizations: bodyParsed.organizations.map(org => ({
+          id: org.sub,
+          username: org.preferred_username,
+          is_enterprise: org.isEnterprise,
+          can_pay: org.canPay,
+        })), 
       };
 
       return callback(null, profile);
