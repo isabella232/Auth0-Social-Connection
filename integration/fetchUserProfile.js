@@ -35,13 +35,27 @@ module.exports = function fetchUserProfile(accessToken, context, callback) {
 
         is_pro: bodyParsed.isPro,
         can_pay: bodyParsed.canPay,
-        organizations: bodyParsed.organizations.map(org => ({
+        organizations: (bodyParsed.orgs || []).map(org => ({
           id: org.sub,
           username: org.preferred_username,
           is_enterprise: org.isEnterprise,
           can_pay: org.canPay,
         })), 
       };
+
+      for (const key in profile) {
+        if (profile[key] === undefined) {
+          delete profile[key];
+        }
+      }
+
+      for (const org of profile.organizations) {
+        for (const key in org) {
+          if (org[key] === undefined) {
+            delete org[key];
+          }
+        }
+      }
 
       return callback(null, profile);
     }
