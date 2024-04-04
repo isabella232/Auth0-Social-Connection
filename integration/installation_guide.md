@@ -7,7 +7,7 @@ It's also possible to interact with the Hugging Face API using the access token 
 1. An Auth0 account and tenant. [Sign up for free](https://auth0.com/signup).
 1. Create a Hugging Face account. [Sign up for free](https://huggingface.co/join).
 
-## Set up [[TODO: Your service name]]
+## Set up Hugging Face
 
 1. Create an application at https://huggingface.co/settings/applications/new
 1. Make sure to tick the scopes you need, for example `profile` and `email`.
@@ -19,7 +19,8 @@ It's also possible to interact with the Hugging Face API using the access token 
 1. Select **Add Integration** (at the top of this page).
 1. Read the necessary access requirements, and select **Continue**.
 1. Configure the integration using the following fields:
-   * [[TODO: Describe all configuration fields]]
+   * Client ID
+   * Client Secret
 1. Select the **Permissions** needed for your applications.
 1. Choose and configure whether to sync user profile attributes at each login.
 1. Select **Create**.

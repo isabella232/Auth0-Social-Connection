@@ -2,7 +2,7 @@
 module.exports = function fetchUserProfile(accessToken, context, callback) {
   request.get(
     {
-      url: "USERINFO_URL",
+      url: "https://huggingface.co/oauth/userinfo",
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
